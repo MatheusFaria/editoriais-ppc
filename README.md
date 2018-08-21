@@ -4,7 +4,7 @@
 
 ### Aula 1
 
-**Questões: **
+**Questões:**
 [URI1001](https://www.urionlinejudge.com.br/repository/UOJ_1001.html),
 [URI1866](https://www.urionlinejudge.com.br/repository/UOJ_1866.html),
 [URI1021](https://www.urionlinejudge.com.br/repository/UOJ_1021.html),

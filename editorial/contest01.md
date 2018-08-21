@@ -1,6 +1,6 @@
 # Contest 01 - Editorial
 
-## URI1001
+## URI1001 - Extremamente Básico
 
 [URI1001](https://www.urionlinejudge.com.br/repository/UOJ_1001.html)
 
@@ -8,7 +8,7 @@ Esta questão é composta por uma soma simples, o que deveria ser obervado
 com mais cuidade é a formatação da saída que deveria ser `X = 10`, onde
 `10` representa o resultado de uma soma.
 
-## URI1866
+## URI1866 - Conta
 
 [URI1866](https://www.urionlinejudge.com.br/repository/UOJ_1866.html)
 
@@ -18,7 +18,7 @@ fosse impar o resultado seria `1`, caso o número fosse par o resultado seria
 `0`. Para execução do teste de paridade, você pode utilizar o operador
 de módulo `%`.
 
-## URI1021
+## URI1021 - Notas e Moedas
 
 [URI1021](https://www.urionlinejudge.com.br/repository/UOJ_1021.html)
 
@@ -50,7 +50,7 @@ o valor descontando as `5 notas` de `100`. Para fazer isso há duas formas:
 
 O pensamento deve ser repetir para todos os valores de notas e moedas.
 
-## URI1198
+## URI1198 - O Bravo Guerreiro Hashmat
 
 [URI1198](https://www.urionlinejudge.com.br/repository/UOJ_1198.html)
 
@@ -75,7 +75,7 @@ a resposta correta.
 Agora, caso você tenha escolhido o tipo `long long int`, a subtração final,
 caso negativa, poderia ser multiplicada por `-1`.
 
-## URI2057
+## URI2057 - Fuso Horário
 
 [URI2057](https://www.urionlinejudge.com.br/repository/UOJ_2057.html)
 
@@ -128,7 +128,7 @@ um múltiplo de `24` para deixar o horário positivo e não afetar no
 resultado final, por exemplo, `(horario + 24) % 24`.
 
 
-## URI1238
+## URI1238 - Combinador
 
 [URI1238](https://www.urionlinejudge.com.br/repository/UOJ_1238.html)
 
