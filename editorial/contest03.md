@@ -1,0 +1,190 @@
+# Contest 03 - Editorial
+
+**Autores** : [Iuri Severo](https://github.com/iurisevero), [Leonardo Medeiros](https://github.com/leomedeiros1)
+
+**Revisores**: [Matheus Faria](https://github.com/matheusfaria)
+
+## CF80A - Panoramix's Prediction
+
+[CF80A](http://codeforces.com/problemset/problem/80/A)
+
+O ponto dessa questão está no limite atribuído para `N` e
+`M`. Como ambos não podem passar de 50, a verificação se o
+valor é primo ou não feito de modo bruto não consumiria muito
+tempo. Então, para resolver bastava verificar se
+M era primo mesmo e, se ele fosse, verificar se no intervalo `[N, M]`
+não havia nenhum outro valor primo.
+
+Outra solução, que pode ser adotada par várias questões que envolvem
+números primos, é utilizar o [Crivo de Erastostenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes).
+Quem tem uma ordem de complexidade baixa, e pré computa se o número é primo ou
+não. Assim você poderia rodar o crivo, e checar se entre o número `N` e `M`
+não havia nenhum outro primo.
+
+
+## CF61A - Ultra-Fast Mathematician
+
+[CF61A](http://codeforces.com/problemset/problem/61/A)
+
+Nessa questão o input consiste em dois valores binários
+de mesmo tamanho e pede como saída um valor que
+represente a soma deles, onde 0 + 1 = 1 e 1 + 1 = 0.
+Para solução podemos escanear o primeiro valor como
+uma string e, a partir do tamanho dela, escanear os caracteres
+do segundo valor e verificar se a saída deve ser 0 ou 1
+comparando-os com os caracteres da string principal.
+A saída pode ser feita por meio de um print direto ou da
+criação de uma nova string para armazenar os valores
+verificados
+
+Outra solução, é utilizar o [bitset](https://github.com/MatheusFaria/TEP/blob/master/Introducao/STL.md#bitset),
+que é uma estrutura que consegue fazer operações binárias: `&` (and), `|` (or), `^` (xor).
+Estas operações são feitas bit a bit (também conhecido como `bitwise`). A operação
+que estamos procurando, e a qual é descrita na questão, é a operação [xor](https://en.wikipedia.org/wiki/Bitwise_operation#XOR) `^`,
+que seja seguinte tabela
+
+| A | B | A ^ B |
+|:-:|:-:|:-----:|
+| 0 | 0 |   0   |
+| 0 | 1 |   1   |
+| 1 | 0 |   1   |
+| 1 | 1 |   0   |
+
+
+Para imprimir o resultado do bitset, basta converter eles para string: `(b1 ^ b2).to_string()`.
+
+
+## CF233A - Perfect Permutation
+
+[CF233A](http://codeforces.com/problemset/problem/233/A)
+
+Nessa questão se tem diversas condições para criação de
+uma sequência e ela pede para verificar se é possível ou não
+criar essa sequência a partir de um tamanho `N` e, se possível,
+printar a sequência criada.
+
+A partir dos exemplos pode-se verificar que para `N = 1`, a
+sequência é inválida, para `N = 2` temos `[2, 1]` e para `N = 4` temos
+`[2, 1, 4, 3]`. Nesse momento um padrão já começa a ser
+apresentado, onde um valor impar resulta em uma sequência
+inválida e dois valores pares consecutivos resultam em
+sequências formadas por `[A1, A1-1, B1, B1-1]`.
+
+Aumentando a sequência 1 por 1, resolvendo os pré-requisitos
+manualmente, verificamos que:
+
+```
+N = 1, sequência impossível;
+N = 2, [2, 1];
+N = 3, sequência impossível;
+N = 4, [2, 1, 4, 3];
+N = 5, sequência impossível;
+N = 6, [2, 1, 4, 3, 6, 5];
+```
+
+Seguindo o padrão encontrado podemos deduzir que:
+
+```
+N = 99, sequência impossível;
+N = 100, [2, 1, 4, 3, ..., 100, 99];
+```
+
+E que os pré-requisitos estabelecem que toda sequência com
+`N % 2 == 1` é impossível e para as sequência possíveis temos os
+valores começando em `A = 2`, seguido por `A - 1` e fazendo a
+sequência com `A += 2`.
+
+As sequências `N % 2 == 1` são impossíveis, pois não é possível dispor os números
+de forma que você obedeça as restrições. Por exemplo, `N = 3` os valores que
+a sequência pode possuir são `[1, 2, 3]`. Para que `P(P(i)) == i` (1) e `P(i) != i` (2), temos
+que trocar `1` e `2` de lugar, porém fazendo isso o `3` quebra a condição 2.
+Se trocar `1` e `3` de lugar, o `2` quebra a condição 2. Se trocarmos todos
+de posição, por exemplo `[3, 1, 2]`, todos quebram a condição 1. Então
+dada uma sequência de tamanho impar, é impossível cumprir as condições.
+
+
+## CF144A - Arrival of the General
+
+[CF144A](http://codeforces.com/problemset/problem/144/A)
+
+
+## CF200B - Drinks
+
+[CF200B](http://codeforces.com/problemset/problem/200/B)
+
+
+## CF148A - Insomnia cure
+
+[CF148A](http://codeforces.com/problemset/problem/148/A)
+
+
+## CF248A - Cupboards
+
+[CF248A](http://codeforces.com/problemset/problem/248/A)
+
+
+## CF155A - I\_love\_%username%
+
+[CF155A](http://codeforces.com/problemset/problem/155/A)
+
+
+## CF746C - Tram
+
+[CF746C](http://codeforces.com/problemset/problem/746/C)
+
+
+## CF399A - Helpful Maths
+
+[CF399A](http://codeforces.com/problemset/problem/339/A)
+
+
+## CF288A - Is your horseshoe on the other hoof?
+
+[CF288A](http://codeforces.com/problemset/problem/228/A)
+
+
+## CF71A - Way Too Long Words
+
+[CF71A](http://codeforces.com/problemset/problem/71/A)
+
+
+## CF236A - Boy or Girl
+
+[CF236A](http://codeforces.com/problemset/problem/236/A)
+
+
+## CF141A - Amusing Joke
+
+[CF141A](http://codeforces.com/problemset/problem/141/A)
+
+
+## CF151A - Soft Drinking
+
+[CF151A](http://codeforces.com/problemset/problem/151/A)
+
+
+## CF133A - HQ9+
+
+[CF133A](http://codeforces.com/problemset/problem/133/A)
+
+
+## CF112A - Petya and Strings
+
+[CF112A](http://codeforces.com/problemset/problem/112/A)
+
+
+## CF231A - Team
+
+[CF231A](http://codeforces.com/problemset/problem/231/A)
+
+
+## CF282A - Bit++
+
+[CF282A](http://codeforces.com/problemset/problem/282/A)
+
+
+## CF227B - Effective Approach
+
+[CF227B](http://codeforces.com/problemset/problem/227/B)
+
+

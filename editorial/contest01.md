@@ -1,5 +1,7 @@
 # Contest 01 - Editorial
 
+**Autores** : [Matheus Faria](https://github.com/matheusfaria)
+
 ## URI1001 - Extremamente Básico
 
 [URI1001](https://www.urionlinejudge.com.br/repository/UOJ_1001.html)

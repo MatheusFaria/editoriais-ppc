@@ -1,5 +1,7 @@
 # Contest 01 - Editorial
 
+**Autores** : [Matheus Faria](https://github.com/matheusfaria)
+
 ## URI2139 - Natal de Pedrinho
 
 [URI2139](https://www.urionlinejudge.com.br/repository/UOJ_2139.html)
