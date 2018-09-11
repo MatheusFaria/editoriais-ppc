@@ -107,6 +107,17 @@ dada uma sequência de tamanho impar, é impossível cumprir as condições.
 
 [CF144A](http://codeforces.com/problemset/problem/144/A)
 
+Um meio de solucionar o problema é marcar a posição do
+menor soldado e a do maior, após isso ver quantos
+movimentos gastaria para ir do soldado menor até o final da
+fila, subtraindo o tamanho da fila pela posição, e o mesmo para
+o soldado maior, que gastará a posição de movimentos para
+chegar ao início. Ficando atento ao fato de que se o soldado
+maior estiver numa posição mais a frente do soldado menor,
+deve-se subtrair 1 dos movimentos, devido ao fato de nos dois
+cálculos considerarem o movimento de troca entre o maior e o
+menor soldado.
+
 
 ## CF200B - Drinks
 
