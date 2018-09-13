@@ -187,51 +187,127 @@ Veja o [editorial original](http://codeforces.com/blog/entry/49160)
 
 [CF399A](http://codeforces.com/problemset/problem/339/A)
 
+O ponto principal dessa questão esta na maneira de
+escanear. Utilizando um `scanf("%d%c")` dentro de um loop,
+você conseguiria escanear os valores, remover o `+` e, no
+momento que o `%c` fosse igual a `\n`, parar loop.
+
+Os valores escaneados pelo `%d` podem ser colocados em
+um `vector<int>` que depois seria ordenado pela função `sort`.
+
 
 ## CF288A - Is your horseshoe on the other hoof?
 
 [CF288A](http://codeforces.com/problemset/problem/228/A)
+
+Nessa questão uma possível solução seria escanear os valores, inserí-los em
+um [set](https://github.com/MatheusFaria/TEP/blob/master/Introducao/STL.md#set) e após
+isso subtrair 4 do tamanho do set. O valor absoluto do resultado seria igual a quantidade de
+sapatos repetidos.
+
+Outra solução era ler os 4 valores em um array ou vector, ordernar este array,
+e fazer uma contagem de quantos elementos eram iguais ao elemento anterior.
 
 
 ## CF71A - Way Too Long Words
 
 [CF71A](http://codeforces.com/problemset/problem/71/A)
 
+Para resolver esse problema era possível utilizar o tipo
+string, escanear a palavra e com a função `.size()` determinar se
+ela é muito grande ou não.
+Caso ela fosse, era possível fazer o print do seguinte
+modo:
+`cout << w[0] << w.size() - 2 << w[w.size() - 1] << endl;`
+
 
 ## CF236A - Boy or Girl
 
 [CF236A](http://codeforces.com/problemset/problem/236/A)
+
+Nessa questão era possível utilizar um `set<char>` para
+guardar os caracteres do nome sem chance deles se repetirem
+e, após isso, com o operador de módulo (`%`) verificar se havia
+uma quantidade ímpar ou par de letras.
+
+Outra solução é usar um array onde cada posição é uma letra, por exemplo,
+`0` é o `a`, `1` o `b`, e assim por diante. Para converter
+o `char` em indice do array, você pode fazer `c - 'a'`, esta operação
+vai retornar o indice correto. Feito isso você deve contabilizar no array,
+toda ocorrencia de cada caractere, ou seja, `histogram[c - 'a']++`. Ao fim
+você percorre o array vendo quantas posições são diferentes de zero.
 
 
 ## CF141A - Amusing Joke
 
 [CF141A](http://codeforces.com/problemset/problem/141/A)
 
+Como na questão `CF236A`, é possível fazer um histograma das duas primeiras
+palavras. Onde cada letra é convertida para um indice do array `c - 'A'`,
+e contabilizada `histogram[c - 'A']++`. Você deve utilizar o mesmo histograma
+para todas as palavras, só que na última ao invés de incrementar a ocorrencia,
+você vai decrementar `histogram[c - 'A']--`. Assim se ao fim de tudo, você
+percorrer o seu histograma e alguma posição não estiver zerada, a resposta
+é "NO".
+
+O pensamento por trás dessa solução é contabilizar a ocorrencia das letras
+nas duas primeiras palavras, e ver se a mesma ocorrencia acontece na segunda palavra.
+
 
 ## CF151A - Soft Drinking
 
 [CF151A](http://codeforces.com/problemset/problem/151/A)
+
+O mais difícil dessa questão é a interpretação dela. São
+muitas variáveis e muitos cálculos internos antes de começar a
+solução em si.
+
+Após organizar cada parte do drink corretamente,
+separando a quantidade de drinks que eram possíveis fazer
+com base na quantidade de garrafas, a quantidade de fatias de
+limão (e não de limões inteiros) e quantos drinks podiam ser
+feitos com base na quantidade de sal, bastava pegar o menor
+valor entre os 3 e dividir pela quantidade de amigos.
 
 
 ## CF133A - HQ9+
 
 [CF133A](http://codeforces.com/problemset/problem/133/A)
 
+Nessa questão bastava escanear a string e verificar se
+alguma das letras dela era `H`, `Q` ou `9`, caso fosse, o print era
+positivo, caso não, negativo.
 
 ## CF112A - Petya and Strings
 
 [CF112A](http://codeforces.com/problemset/problem/112/A)
+
+Nesse problema, uma das formas de solução é deixar
+todas letras escaneadas minúsculas e depois comparar as
+strings.
 
 
 ## CF231A - Team
 
 [CF231A](http://codeforces.com/problemset/problem/231/A)
 
+Nessa questão, para verificar se o problema seria
+solucionado, bastava somar a linha escaneada e, se a soma
+resultasse em um valor `<= 2`, incrementar um contador de
+"problemas solucionados", após todas linhas escaneadas, o
+contador teria a quantidade de problemas solucionados pelo
+trio.
+
 
 ## CF282A - Bit++
 
 [CF282A](http://codeforces.com/problemset/problem/282/A)
 
+Um jeito para solucionar esse exercício era dar
+maior atenção para o segundo caractere da string escaneada.
+Como as possibilidades de string são `++X`, `X++`, `--X` ou `X--`,
+o segundo caractere da string ou será `+` ou `-`, indicando assim a
+operação que deverá ser realizada.
 
 ## CF227B - Effective Approach
 
