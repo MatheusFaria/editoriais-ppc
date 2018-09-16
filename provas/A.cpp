@@ -23,8 +23,8 @@ int main() {
         if (is_palindrome(phrase)) {
             bool ok = true;
 
-            for(int i = 0, j = words.size() - 1; i < words.size()/2 + (words.size() % 2); ++i, --j) {
-                if (words[i] != words[j] || !is_palindrome(words[i])) {
+            for(auto word: words) {
+                if (!is_palindrome(word)) {
                     ok = false;
                     break;
                 }
