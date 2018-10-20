@@ -48,9 +48,8 @@ Ao consideramos o `i-`ésimo brinquedo, temos duas opções:
 Qual das duas opções escolher? Basta tentar o máximo das duas.
 
 `f(0, time) = 0`
-`f(i, time) = max(f(i - 1, time), P[i] + f(i, time - D[i])), time >= D[i]`
 
-Código: [link]()
+`f(i, time)` = `max(f(i - 1, time), P[i] + f(i, time - D[i]))`, `time >= D[i]`
 
 ## URI-1034 - Festival de Estátuas de Gelo
 
@@ -58,7 +57,7 @@ Código: [link]()
 
 **Problema**
 
-Você possui `n` blocos. O `i-`ésimo bloco possui altura `a[i]`. VocÊ deseja empilhar os blocos, um em cima do outro, para construir uma pilha de tamanho exatamente `M`. Qual o menor número de blocos que você pode empilhar tal que a pilha tenha soma das alturas dos blocos = `M`? Um bloco pode ser utilizado zero ou mais vezes.
+Você possui `n` blocos. O `i-`ésimo bloco possui altura `a[i]`. Você deseja empilhar os blocos, um em cima do outro, para construir uma pilha de tamanho exatamente `M`. Qual o menor número de blocos que você pode empilhar tal que a pilha tenha soma das alturas dos blocos = `M`? Um bloco pode ser utilizado zero ou mais vezes.
 
 **Solução recursiva utilizando Programação Dinâmica**
 
@@ -138,8 +137,9 @@ Tamos duas opções:
 
 Portanto:
 
+- `f(0) = 0`
 - `f(1) = cont[1]`
-- `f(i > 2) = max(f(i - 1), i * cont[i] + f(i - 2)))`
+- `f(i >= 2) = max(f(i - 1), i * cont[i] + f(i - 2)))`
 
 ## CF489C - Boredom Given Length and Sum of Digits...
 
@@ -153,7 +153,7 @@ Portanto:
 
 Vamos dividir a solução deste problema em duas partes:
 
-`Sabendo se existe ou não uma solução`
+***Identificando a existência de uma solução:***
 
 Resolveremos esta parte do problema utilizando programaçã dinâmica.
 
@@ -165,6 +165,17 @@ Vamos colocar os digitos da direita para a esquerda. Em cada passo noś podemos 
 
 | Atributo | Definição |
 | ------------- |:-------------:|
-| `f(0, s)` | Neste caso queremos constuir uma string de tamanho 0 que a some dos elementos seja exatamente `s`. A única forma possível é se `s = 0`, portanto `f(0, s) = (s == 0)` |
+| input `m == 1` | Trate este caso a parte. |
+| input `s == 0` | Trate este caso a parte. |
+| `f(0, s)` | Neste caso queremos constuir uma string de tamanho 0 que a soma dos elementos seja exatamente `s`. A única forma possível é se `s = 0`, portanto `f(0, s) = (s == 0)` |
 | `f(1, s)` | Neste caso podemos colocar apenas os digigitos `1-9`. Como necessitamos de uma soma `s`, precisamos colocar o digito "`s`". Isso só será possível se `1 <= 9 <= s`, portanto `f(1, s) = (s >= 1 and s <= 9)` |
 | `f(i, s)` | Neste caso podemos colocar qualquer digito `0-9`. Portanto `f(i, s) OR= f(i - 1, s - d)` para todo `0 <= d <= 9` e `0 <= d <= s` |
+
+***Construindo uma solução***
+
+O passo anterior gatantiu a existência (ou não) de uma solução. Caso exista uma solução de tamanho `m` e soma dos digitos `s`, podemos construí-la da seguinte maneira:
+
+| Atributo | Definição |
+| ------------- |:-------------:|
+| O menor número | Comece da direita para a esquerda. Tente preencher o máximo possível de `9` da direita para esquerda. Lembre-se de guardar pelo menos `1` valor da soma para não ter leading-zeros. Preencha o vazio do meio com `0` |
+| O maior número | Comece da esquerda para a direita. Tente preencher o máximo possível de `9` da esquerda para a direita. Quando não for possível preencha com o restante e o zeroes. |
