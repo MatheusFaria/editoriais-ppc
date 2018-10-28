@@ -52,16 +52,16 @@
 
 [Editorial](editorial/contest03.md)
 
-### Aula 8
+### Aula 7
 
 **Questões:**
 
-[URI-1487](https://www.urionlinejudge.com.br/judge/pt/problems/view/1487),
-[URI-1034](https://www.urionlinejudge.com.br/judge/pt/problems/view/1034),
+[URI1487](https://www.urionlinejudge.com.br/judge/pt/problems/view/1487),
+[URI1034](https://www.urionlinejudge.com.br/judge/pt/problems/view/1034),
 [CF415A](http://codeforces.com/contest/455/problem/A),
 [CF489C](http://codeforces.com/contest/489/problem/C)
 
-[Editorial](editorial/contest04.md)
+[Editorial](editorial/contest07.md)
 
 ## Provas
 

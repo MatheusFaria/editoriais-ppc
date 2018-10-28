@@ -2,11 +2,11 @@
 
 **Autores** : [Marlon Mendes](https://github.com/marlonbymendes)
 
-**Revisores**:
+**Revisores**: [Matheus Faria](https://github.com/matheusfaria)
 
-## URI-1487 - Six Flags
+## URI1487 - Six Flags
 
-[URI-1487](https://www.urionlinejudge.com.br/judge/pt/problems/view/1487)
+[URI1487](https://www.urionlinejudge.com.br/judge/pt/problems/view/1487)
 
 **Problema**
 
@@ -51,9 +51,9 @@ Qual das duas opções escolher? Basta tentar o máximo das duas.
 
 `f(i, time)` = `max(f(i - 1, time), P[i] + f(i, time - D[i]))`, `time >= D[i]`
 
-## URI-1034 - Festival de Estátuas de Gelo
+## URI1034 - Festival de Estátuas de Gelo
 
-[URI-1034](https://www.urionlinejudge.com.br/judge/pt/problems/view/1034)
+[URI1034](https://www.urionlinejudge.com.br/judge/pt/problems/view/1034)
 
 **Problema**
 
