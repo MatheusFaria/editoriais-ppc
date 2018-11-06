@@ -65,6 +65,5 @@
 
 ## Provas
 
-### Prova 1
-
-[Editorial](provas/p1.md)
+- [Prova 1 - Editorial](provas/p1/p1.md)
+- [Prova 3 - Editorial](provas/p3/p3.md)
